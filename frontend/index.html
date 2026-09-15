@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SentinelDesk | SOC Log Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">S</div>
+
+        <div>
+          <h2>SentinelDesk</h2>
+          <p>SOC Operations</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="active" href="#overview">Overview</a>
+        <a href="#alerts">Alert Queue</a>
+        <a href="#timeline">Event Timeline</a>
+      </nav>
+
+      <div class="engine-status">
+        <span class="status-dot"></span>
+        Detection Engine Online
+        <small>Windows and Linux Rule Pack</small>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">Security Operations Center</p>
+          <h1>Log intelligence, made actionable.</h1>
+
+          <p class="subtitle">
+            Upload authentication or system logs. Detect brute-force attempts,
+            risky IPs, privilege escalation, and suspicious command activity.
+          </p>
+        </div>
+
+        <div class="api-status">
+          <span class="status-dot"></span>
+          API Healthy
+        </div>
+      </header>
+
+      <section class="upload-panel">
+        <div>
+          <p class="eyebrow">New Investigation</p>
+          <h2>Analyze security logs</h2>
+
+          <p class="upload-description">
+            Upload .log, .txt, or .csv files to generate investigation-ready alerts.
+          </p>
+        </div>
+
+        <form id="uploadForm">
+          <label class="file-drop-zone" for="logFile">
+            <input
+              id="logFile"
+              name="logFile"
+              type="file"
+              accept=".log,.txt,.csv"
+              required
+            />
+            <span id="fileLabel">Choose a security log file</span>
+          </label>
+
+          <button id="analyzeButton" type="submit">
+            Run Analysis
+          </button>
+        </form>
+      </section>
+
+      <section id="overview" class="metrics-grid">
+        <article class="metric-card">
+          <p>Events Processed</p>
+          <h2 id="eventsProcessed">--</h2>
+        </article>
+
+        <article class="metric-card warning-card">
+          <p>Failed Logins</p>
+          <h2 id="failedLogins">--</h2>
+        </article>
+
+        <article class="metric-card danger-card">
+          <p>Alerts Generated</p>
+          <h2 id="alertsGenerated">--</h2>
+        </article>
+
+        <article class="metric-card">
+          <p>Risk Score</p>
+          <h2 id="riskScore">--</h2>
+          <small id="riskCaption">Awaiting analysis</small>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <section id="alerts" class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Priority Queue</p>
+              <h2>Detected Alerts</h2>
+            </div>
+          <div class="panel-actions">
+  <div class="filter-group">
+    <button class="filter-button active-filter" data-severity="All">
+      All
+    </button>
+
+    <button class="filter-button" data-severity="Critical">
+      Critical
+    </button>
+
+    <button class="filter-button" data-severity="High">
+      High
+    </button>
+  </div>
+
+  <span id="alertCount">0 Alerts</span>
+
+  <button id="downloadReportButton" type="button" disabled>
+    Download Report
+  </button>
+ </div>
+    </div>
+          <div id="alertList" class="alert-list">
+            <p class="empty-message">
+              Upload a log file to generate security alerts.
+            </p>
+          </div>
+        </section>
+
+        <aside class="panel coverage-panel">
+          <p class="eyebrow">Detection Coverage</p>
+          <h2>Rules Enabled</h2>
+
+          <ul>
+            <li>Brute-force detection</li>
+            <li>Risky IP matching</li>
+            <li>Privilege escalation</li>
+            <li>Suspicious PowerShell</li>
+            <li>Repeated login failures</li>
+            <li>New account creation</li>
+            
+          </ul>
+
+          <div class="risk-section">
+            <p>Composite Risk Score</p>
+
+            <div class="risk-bar">
+              <span id="riskBarFill"></span>
+            </div>
+
+            <small id="riskExplanation">
+              Risk score will appear after analysis.
+            </small>
+            <div class="case-notes">
+  <p>Investigation Notes</p>
+
+  <textarea
+    id="analystNotes"
+    placeholder="Add investigation notes, evidence, containment actions, or escalation details..."
+  ></textarea>
+
+  <button id="saveNotesButton" type="button">
+    Save Notes
+  </button>
+
+  <small id="notesStatus"></small>
+</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="timeline" class="panel timeline-panel">
+  <div class="panel-heading">
+    <div>
+      <p class="eyebrow">Investigation Evidence</p>
+      <h2>Security Event Timeline</h2>
+    </div>
+
+    <span id="timelineCount">0 Events</span>
+  </div>
+
+  <div class="timeline-table">
+    <div class="timeline-header">
+      <span>Time</span>
+      <span>Event</span>
+      <span>User</span>
+      <span>Source IP</span>
+    </div>
+
+    <div id="timelineList">
+      <p class="empty-message">
+        Upload a log file to build the investigation timeline.
+      </p>
+    </div>
+  </div>
+</section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

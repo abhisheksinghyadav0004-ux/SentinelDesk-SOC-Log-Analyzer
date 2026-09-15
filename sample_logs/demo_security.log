@@ -1,0 +1,10 @@
+2026-09-14T10:10:01Z AUTH FAILED user=finance.admin ip=185.220.101.12 host=VPN-Gateway reason="Invalid password"
+2026-09-14T10:10:18Z AUTH FAILED user=finance.admin ip=185.220.101.12 host=VPN-Gateway reason="Invalid password"
+2026-09-14T10:10:35Z AUTH FAILED user=finance.admin ip=185.220.101.12 host=VPN-Gateway reason="Invalid password"
+2026-09-14T10:10:52Z AUTH FAILED user=finance.admin ip=185.220.101.12 host=VPN-Gateway reason="Invalid password"
+2026-09-14T10:11:09Z AUTH FAILED user=finance.admin ip=185.220.101.12 host=VPN-Gateway reason="Invalid password"
+2026-09-14T10:13:44Z AUTH SUCCESS user=arjun.singh ip=10.24.8.41 host=VPN-Gateway mfa=verified
+2026-09-14T10:17:10Z WINDOWS event_id=4672 PRIVILEGE_ASSIGNED user=svc.backup ip=10.20.2.16 host=FILE-SRV-01
+2026-09-14T10:19:35Z PROCESS_CREATED user=it.admin ip=10.20.2.44 host=WS-IT-07 command="powershell.exe -enc JABXAGMAPQ=="
+2026-09-14T10:22:09Z AUTH FAILED user=ceo.office ip=45.33.32.156 host=Mail-Gateway reason="Invalid password"
+2026-09-14T10:24:18Z WINDOWS event_id=4720 USER_CREATED user=temp.contractor ip=10.20.2.8 host=DC-01

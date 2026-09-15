@@ -1,0 +1,11 @@
+timestamp,event,event_id,user,ip,host,command
+2026-09-14T10:10:01Z,AUTH FAILED,4625,finance.admin,185.220.101.12,VPN-Gateway,Invalid password
+2026-09-14T10:10:18Z,AUTH FAILED,4625,finance.admin,185.220.101.12,VPN-Gateway,Invalid password
+2026-09-14T10:10:35Z,AUTH FAILED,4625,finance.admin,185.220.101.12,VPN-Gateway,Invalid password
+2026-09-14T10:10:52Z,AUTH FAILED,4625,finance.admin,185.220.101.12,VPN-Gateway,Invalid password
+2026-09-14T10:11:09Z,AUTH FAILED,4625,finance.admin,185.220.101.12,VPN-Gateway,Invalid password
+2026-09-14T10:13:44Z,AUTH SUCCESS,4624,arjun.singh,10.24.8.41,VPN-Gateway,MFA verified
+2026-09-14T10:17:10Z,PRIVILEGE_ASSIGNED,4672,svc.backup,10.20.2.16,FILE-SRV-01,BackupOperator assigned
+2026-09-14T10:19:35Z,PROCESS_CREATED,4688,it.admin,10.20.2.44,WS-IT-07,powershell.exe -enc JABXAGMAPQ==
+2026-09-14T10:22:09Z,AUTH FAILED,4625,ceo.office,45.33.32.156,Mail-Gateway,Invalid password
+2026-09-14T10:24:18Z,USER_CREATED,4720,temp.contractor,10.20.2.8,DC-01,Account created

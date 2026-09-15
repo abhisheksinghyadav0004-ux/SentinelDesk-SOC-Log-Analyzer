@@ -1,0 +1,20 @@
+# Python virtual environment
+backend/.venv/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Flask temporary files
+instance/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# VS Code workspace settings
+.vscode/
+
+# Generated investigation reports
+sentineldesk-investigation-report.json
